@@ -18,7 +18,7 @@ entrypoints==0.4
 executing==1.0.0
 fernet==1.0.1
 filelock==3.12.0
-Flask==2.3.2
+Flask>=2.0.0
 Flask-API==3.0.post1
 flatbuffers==23.3.3
 fonttools==4.38.0
