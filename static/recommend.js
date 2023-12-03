@@ -63,7 +63,7 @@ function load_details(my_api_key,title){
 function movie_recs(movie_title,movie_id,my_api_key){
   $.ajax({
     type:'POST',
-    url:"/similarity",
+    url:"https://iiita-movie.onrender.com/similarity",
     data:{'name':movie_title},
     success: function(recs){
       if(recs=="Sorry! The movie you requested is not in our database. Please check the spelling or try with some other movies"){
@@ -157,7 +157,7 @@ function show_details(movie_details,arr,movie_title,my_api_key,movie_id){
   $.ajax({
     type:'POST',
     data:details,
-    url:"/recommend",
+    url:"https://iiita-movie.onrender.com/recommend",
     dataType: 'html',
     complete: function(){
       $("#loader").delay(500).fadeOut();
