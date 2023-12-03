@@ -153,7 +153,7 @@ function show_details(movie_details,arr,movie_title,my_api_key,movie_id){
       'rec_movies':JSON.stringify(arr),
       'rec_posters':JSON.stringify(arr_poster),
   }
-
+ console.log(details)
   $.ajax({
     type:'POST',
     data:details,
