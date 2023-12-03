@@ -1,3 +1,6 @@
+
+
+
 $(function() {
   // Button will be disabled until we type anything inside the input field
   const source = document.getElementById('autoComplete');
@@ -12,7 +15,7 @@ $(function() {
   source.addEventListener('input', inputHandler);
 
   $('.movie-button').on('click',function(){
-    var my_api_key = 'a4af7ca9c0c3e510cd742a5db8f3ecc6';
+    var my_api_key = 'c11fd94a31bf4ffbf82b2248549e8d8c';
     var title = $('.movie').val();
     if (title=="") {
       $('.results').css('display','none');
@@ -26,7 +29,7 @@ $(function() {
 
 // will be invoked when clicking on the recommended movies
 function recommendcard(e){
-  var my_api_key = 'a4af7ca9c0c3e510cd742a5db8f3ecc6';
+  var my_api_key = 'c11fd94a31bf4ffbf82b2248549e8d8c';
   var title = e.getAttribute('title'); 
   load_details(my_api_key,title);
 }
@@ -83,7 +86,7 @@ function movie_recs(movie_title,movie_id,my_api_key){
       }
     },
     error: function(){
-      alert("API Error");
+      alert("Faild to Load Moive details!");
       $("#loader").delay(500).fadeOut();
     },
   }); 
@@ -98,7 +101,7 @@ function get_movie_details(movie_id,my_api_key,arr,movie_title) {
       show_details(movie_details,arr,movie_title,my_api_key,movie_id);
     },
     error: function(){
-      alert("API Error!");
+      alert("Error in API Fetching!");
       $("#loader").delay(500).fadeOut();
     },
   });
@@ -217,7 +220,7 @@ function get_movie_cast(movie_id,my_api_key){
         }
       },
       error: function(){
-        alert("Invalid Request!");
+        alert("Error in API Fetching!");
         $("#loader").delay(500).fadeOut();
       }
     });
@@ -237,7 +240,7 @@ function get_movie_posters(arr,my_api_key){
         arr_poster_list.push('https://image.tmdb.org/t/p/original'+m_data.results[0].poster_path);
       },
       error: function(){
-        alert("Invalid Request!");
+        alert("Error in API Fetching!");
         $("#loader").delay(500).fadeOut();
       },
     })
