@@ -56,13 +56,13 @@ def get_suggestions():
 
 app = Flask(__name__)
 
-@app.route("/")
-@app.route("/home")
+@app.route("https://iiita-movie.onrender.com/")
+@app.route("https://iiita-movie.onrender.com/home")
 def home():
     suggestions = get_suggestions()
     return render_template('home.html',suggestions=suggestions)
 
-@app.route("/similarity",methods=["POST"])
+@app.route("https://iiita-movie.onrender.com/similarity",methods=["POST"])
 def similarity():
     movie = request.form['name']
     rc = rcmd(movie)
@@ -72,7 +72,7 @@ def similarity():
         m_str="---".join(rc)
         return m_str
 
-@app.route("/recommend",methods=["POST"])
+@app.route("https://iiita-movie.onrender.com/recommend",methods=["POST"])
 def recommend():
     # getting data from AJAX request
     title = request.form['title']
