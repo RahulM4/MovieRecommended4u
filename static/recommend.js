@@ -98,7 +98,7 @@ function get_movie_details(movie_id,my_api_key,arr,movie_title) {
       show_details(movie_details,arr,movie_title,my_api_key,movie_id);
     },
     error: function(){
-      alert("API Error!");
+      alert("Error in API Fetching!");
       $("#loader").delay(500).fadeOut();
     },
   });
@@ -217,7 +217,7 @@ function get_movie_cast(movie_id,my_api_key){
         }
       },
       error: function(){
-        alert("Invalid Request!");
+        alert("Error in API Fetching!");
         $("#loader").delay(500).fadeOut();
       }
     });
@@ -237,7 +237,7 @@ function get_movie_posters(arr,my_api_key){
         arr_poster_list.push('https://image.tmdb.org/t/p/original'+m_data.results[0].poster_path);
       },
       error: function(){
-        alert("Invalid Request!");
+        alert("Error in API Fetching!");
         $("#loader").delay(500).fadeOut();
       },
     })
