@@ -1,4 +1,4 @@
-new AutoComplete({
+new autoComplete({
     data: {                              // Data src [Array, Function, Async] | (REQUIRED)
       src: films,
     },
